@@ -4,23 +4,32 @@ body {
     background: #f4f9ff;
 }
 
-header {
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #0077ff;
     color: white;
-    padding: 15px;
-    text-align: center;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav a {
-    margin: 10px;
+    margin: 5px 10px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
+/* Hero */
 .hero {
     text-align: center;
-    padding: 50px;
+    padding: 60px 20px;
     background: #cce6ff;
 }
 
@@ -33,40 +42,87 @@ nav a {
     margin-top: 10px;
 }
 
+/* Features */
 .features {
     text-align: center;
     padding: 30px;
 }
 
-.services {
-    padding: 20px;
-    text-align: center;
+.feature-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+/* Services */
+.services {
+    text-align: center;
+    padding: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
 .card {
     background: white;
     padding: 20px;
-    margin: 10px;
-    display: inline-block;
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact */
 .contact {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
 }
 
 input, textarea {
-    display: block;
-    margin: 10px auto;
+    width: 100%;
     padding: 10px;
-    width: 80%;
+    margin: 10px 0;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px;
     background: #0077ff;
     color: white;
     border: none;
+    width: 100%;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
